@@ -6,12 +6,12 @@ echo ""
 echo "install docker for ubuntu by download package using script"
 
 # is it ubuntu
-DISTRO=$(lsb_release -i | grep Ubuntu > /dev/null;echo $?)
+DISTRO=$(ls /usr/src | grep linux > /dev/null;echo $?)
 CODENAME=$(lsb_release -c| cut -d ":" -f2| awk '{print $1}')
 if [[ "$DISTRO" != "0" ]]; then
 	#statements
 	echo ""
-	echo "this is not ubuntu distro."
+	echo "this is not linux "
 	echo "abort the command"
 	exit 112
 fi
